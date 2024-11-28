@@ -1,0 +1,128 @@
+[
+    {
+        "id": 0,
+        "image": "example/white_10_3:21_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "Mountain, sky"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "image": "example/2_0:40_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "Mountain"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "image": "example/3_0:53_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "mountain, ground"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "image": "example/4_1:12_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "Grass"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "image": "example/5_1:28_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "Grass"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "image": "example/6_1:58_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "Grass"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "image": "example/7_2:19_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "Water"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "image": "example/8_2:36_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "water"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "image": "example/9_2:43_10_3:21.png",
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image>\nThere are two images side by side. The left image is an intermediate stage in a painting process of the right image. Please tell me what content should be painted next? The answer should be less than 2 words."
+            },
+            {
+                "from": "gpt",
+                "value": "reflection"
+            }
+        ]
+    }
+]

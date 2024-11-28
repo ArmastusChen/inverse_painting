@@ -1,0 +1,83 @@
+image_finetune: true
+
+output_dir: "outputs/mask_gen"
+pretrained_model_path: "../base_ckpt/realisticVisionV51_v51VAE"
+
+noise_scheduler_kwargs:
+  num_train_timesteps: 1000
+  beta_start:          0.00085
+  beta_end:            0.012
+  # beta_schedule:       "scaled_linear"
+  beta_schedule:       "linear"
+  steps_offset:        1
+  clip_sample:         false
+
+description: "### Train Info: Mask Generator ###"
+
+unet_additional_kwargs:
+  use_motion_module              : true
+  motion_module_resolutions      : [ 1,2,4,8 ]
+  unet_use_cross_frame_attention : false
+  unet_use_temporal_attention    : false
+
+  motion_module_type: Vanilla
+  motion_module_kwargs:
+    num_attention_heads                : 8
+    num_transformer_block              : 1
+    attention_block_types              : [ "Temporal_Self", "Temporal_Self" ]
+    temporal_position_encoding         : true
+    temporal_position_encoding_max_len : 24
+    temporal_attention_dim_div         : 1
+    zero_initialize                    : true
+
+
+train_data:
+  data_folder: "../data/sample_data"
+  sample_size:  512 # for 40G 256
+  sample_stride: 1
+  sample_num: 100
+  sample_n_frames: 8
+  clip_model_path: "../base_ckpt/clip-vit-base-patch32"
+  # pad_to_square+resize, resize, pad_to_8, pad_to_16
+  pad_mode: "pad_to_16"
+
+
+
+trainable_modules:
+  - "."
+
+unet_checkpoint_path: ""
+
+
+learning_rate:    1.e-5
+train_batch_size: 1
+
+use_PE: True
+PE_type: 'abs'
+PE_time_max: 100
+PE_time_interval: 5
+
+
+max_train_epoch:      -1
+max_train_steps:      600000
+checkpointing_epochs: -1
+checkpointing_steps:  20000
+gradient_accumulation_steps: 1
+
+feature_type: 'lpips'
+
+additional_input: 'lpips_diff+text'
+binary_output: True  
+binary_threshold: 0.2
+
+win_size: 5
+
+validation_steps:       1000
+validation_steps_tuple: [2, 50]
+
+global_seed: 42
+mixed_precision_training: True 
+enable_xformers_memory_efficient_attention: True
+
+
+is_debug: False
