@@ -54,7 +54,10 @@ We provide demo code to run our pretrained models on any target landscape painti
 
 
 ## Download Pretrained Models
-Download pretrained models from [Google Drive](https://drive.google.com/drive/folders/1exu6Ws-NIZO-3qNO5s50b71fSQALkdvK?usp=drive_link), and then put them into the root folder.
+Download pretrained models either from [Huggingface](https://huggingface.co/boweiche/inverse_painting) or [Google Drive](https://drive.google.com/drive/folders/1exu6Ws-NIZO-3qNO5s50b71fSQALkdvK?usp=drive_link), and then put them into the root folder.  We recommend using the following commands for downloading from Huggingface:
+
+    git lfs install
+    git clone https://huggingface.co/boweiche/inverse_painting
 
 
 After downloading, the pretrained models should be organized as follows:
